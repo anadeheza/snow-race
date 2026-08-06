@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dte0u8013nr71"]
+
+[ext_resource type="Script" uid="uid://cpiuj7ki2k3xf" path="res://Escenas/obstaculo.gd" id="1_obo63"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o3g4d"]
+
+[node name="Obstaculo" type="Area2D" unique_id=883126151]
+script = ExtResource("1_obo63")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1318203925]
+offset_left = 600.0
+offset_top = 300.0
+offset_right = 640.0
+offset_bottom = 340.0
+color = Color(1, 0.22745098, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=12480464]
+position = Vector2(620, 320)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_o3g4d")

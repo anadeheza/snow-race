@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c3pi77iweh2x1"]
+
+[ext_resource type="PackedScene" uid="uid://c01g5igo64pm7" path="res://Escenas/Jugador.tscn" id="1_6lbni"]
+[ext_resource type="Texture2D" uid="uid://cvc0mxtpixfm0" path="res://assets/sprites/bg.jpg" id="2_vt1rs"]
+[ext_resource type="PackedScene" uid="uid://dte0u8013nr71" path="res://Escenas/Obstaculo.tscn" id="3_0kh0y"]
+
+[node name="Main" type="Node2D" unique_id=709673084]
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=1021832033]
+position = Vector2(576, 289)
+scale = Vector2(0.32004434, 0.35629922)
+texture = ExtResource("2_vt1rs")
+
+[node name="Jugador" parent="." unique_id=1786202856 instance=ExtResource("1_6lbni")]
+
+[node name="Obstaculo" parent="." unique_id=883126151 instance=ExtResource("3_0kh0y")]
