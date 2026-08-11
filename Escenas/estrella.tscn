@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b8us0bd103uco"]
+
+[ext_resource type="Script" uid="uid://dxp1qb7qswjcp" path="res://Escenas/estrella.gd" id="1_unjxq"]
+[ext_resource type="Texture2D" uid="uid://bupf5vp6lvvh5" path="res://assets/sprites/star.png" id="2_qf3r3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o3g4d"]
+size = Vector2(38, 34)
+
+[node name="Estrella" type="Area2D" unique_id=197116913]
+script = ExtResource("1_unjxq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=188609090]
+position = Vector2(19, 22)
+shape = SubResource("RectangleShape2D_o3g4d")
+
+[node name="Estrella" type="Sprite2D" parent="." unique_id=1911536138]
+position = Vector2(19, 23)
+scale = Vector2(0.09339408, 0.089330025)
+texture = ExtResource("2_qf3r3")

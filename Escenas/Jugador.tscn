@@ -1,15 +1,19 @@
 [gd_scene format=3 uid="uid://c01g5igo64pm7"]
 
 [ext_resource type="Script" uid="uid://biiueugb8j5k4" path="res://Escenas/jugador.gd" id="1_lg25c"]
+[ext_resource type="Texture2D" uid="uid://d2tpwi47n7fyg" path="res://assets/sprites/gaturroMoto.png" id="2_pqx3y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vt1rs"]
+size = Vector2(146, 80)
 
 [node name="Jugador" type="Area2D" unique_id=1786202856]
 script = ExtResource("1_lg25c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=499423781]
+position = Vector2(73, 40)
 shape = SubResource("RectangleShape2D_vt1rs")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2091842010]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Jugador" type="Sprite2D" parent="." unique_id=2107536063]
+position = Vector2(75.1263, 43.031242)
+scale = Vector2(0.14618598, 0.1319101)
+texture = ExtResource("2_pqx3y")
