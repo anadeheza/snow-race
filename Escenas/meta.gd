@@ -1,12 +1,11 @@
 extends Area2D
 
-@export var vel: float = 1100.0
+@export var vel: float = 300.0
 
 func _ready() -> void:
-	add_to_group("obstaculos")
+	add_to_group("meta")
 
 func _process(delta: float) -> void:
 	position.x -= vel * delta
-	
-	if position.x < -600:
+	if position.x <- 600:
 		queue_free()

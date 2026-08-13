@@ -13,8 +13,8 @@
 script = ExtResource("1_s2ilj")
 
 [node name="Fondo" type="Sprite2D" parent="." unique_id=1021832033]
-position = Vector2(576, 324.5)
-scale = Vector2(0.36170876, 0.35342467)
+position = Vector2(560.937, 324.5)
+scale = Vector2(0.3715286, 0.35342467)
 texture = ExtResource("2_vt1rs")
 script = ExtResource("3_ktoa8")
 
@@ -29,8 +29,9 @@ script = ExtResource("6_crgrh")
 
 [node name="Puntaje" type="Label" parent="UI" unique_id=33016501]
 offset_left = 10.0
+offset_top = 5.0
 offset_right = 71.0
-offset_bottom = 23.0
+offset_bottom = 28.0
 text = "Score: 0"
 
 [node name="Distancia" type="Label" parent="UI" unique_id=1278833552]
@@ -40,11 +41,10 @@ offset_right = 50.0
 offset_bottom = 63.0
 
 [node name="Tiempo" type="Label" parent="UI" unique_id=368183558]
-offset_left = 150.0
+offset_left = 170.0
 offset_top = 40.0
-offset_right = 207.0
+offset_right = 227.0
 offset_bottom = 63.0
-text = "00:00m"
 
 [node name="Win" type="Control" parent="UI" unique_id=1599532535]
 layout_mode = 3
@@ -56,3 +56,21 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="Countdown" type="Control" parent="UI" unique_id=1168620912]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 550.0
+offset_top = 300.0
+offset_right = 590.0
+offset_bottom = 340.0
+
+[node name="Label" type="Label" parent="UI/Countdown" unique_id=523724468]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimerCountdown" type="Timer" parent="." unique_id=1586837304]

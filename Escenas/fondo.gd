@@ -1,9 +1,10 @@
 extends Sprite2D
 
-@export var vel: float = 1.0
+@export var vel: float = 500.0
 
 @onready var jugador: Area2D = get_node("../Jugador")
 
+var habilitado: bool = false
 var ancho: float
 var otra: Sprite2D
 var pos_ini: float
@@ -25,8 +26,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if not jugador:
 		return
+		
+	if not habilitado:
+		return
 	
-	var vel_scroll: float = jugador.vel_act * vel
+	var vel_scroll: float = jugador.vel_act + vel 
 	position.x -= vel_scroll * delta
 	otra.position.x -= vel_scroll * delta
 	

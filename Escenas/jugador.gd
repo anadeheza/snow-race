@@ -1,14 +1,16 @@
 extends Area2D
 
 signal puntaje_cambiado(nuevo_punt: int)
+signal en_la_meta(puntaje_final: int)
 
 @export var pos_x: float = 50.0
-@export var vel_ini: float = 500.0
-@export var freno: float = 0
-@export var aceleracion: float = 10.0
+@export var vel_ini: float = 600.0
+@export var freno: float = 0.1
+@export var aceleracion: float = 100.0
 
 @onready var sprite: Sprite2D = $Jugador
 
+var habilitado: bool = false
 var carril_act: int 
 var target_y: float
 var puntaje: int = 0
@@ -30,10 +32,11 @@ func _ready() -> void:
 	area_entered.connect(_on_area_entered)
 	
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_up"):
-		_cambiar_carril(-1)
-	elif Input.is_action_just_pressed("ui_down"):
-		_cambiar_carril(1)
+	if habilitado:
+		if Input.is_action_just_pressed("ui_up"):
+			_cambiar_carril(-1)
+		elif Input.is_action_just_pressed("ui_down"):
+			_cambiar_carril(1)
 	
 	if vel_act < vel_ini:
 		vel_act += aceleracion * delta
@@ -55,9 +58,12 @@ func _cambiar_carril(direction: int) -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("estrellas"):
 		puntaje += 1
+		vel_act = vel_act + (aceleracion * 2)
 		puntaje_cambiado.emit(puntaje)
 		area.queue_free()
 	elif area.is_in_group("obstaculos"):
 		vel_act = vel_ini * freno
 		frenazo()
 		area.queue_free()
+	elif area.is_in_group("meta"):
+		en_la_meta.emit(puntaje)

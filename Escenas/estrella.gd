@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var vel: float = 800.0
+@export var vel: float = 900.0
 
 func _ready() -> void:
 	add_to_group("estrellas")

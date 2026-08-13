@@ -5,6 +5,15 @@ extends CanvasLayer
 @onready var tiempo: Label = $Tiempo
 @onready var victoria: Control = $Win
 @onready var labelVic: Label = $Win/Label
+@onready var cuenta: Control = $Countdown
+@onready var labelCuenta: Label = $Countdown/Label
+
+func cuenta_reg(text: String) -> void:
+	cuenta.visible = true 
+	labelCuenta.text = text
+	
+func ocultar_cuenta_reg() -> void:
+	cuenta.visible = false
 
 func actualizar_puntos(nuevo_puntaje: int) -> void:
 	puntos.text = "Score: " + str(nuevo_puntaje)
