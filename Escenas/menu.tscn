@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://fbsxrxd4pnfx"]
+
+[ext_resource type="FontFile" uid="uid://bmjg4wphcl25r" path="res://assets/fonts/ComicRelief-Bold.ttf" id="1_lnt83"]
+
+[sub_resource type="GDScript" id="GDScript_lnt83"]
+script/source = "extends Control
+
+@onready var jugar: Button = $Jugar
+
+func _ready() -> void:
+	jugar.pressed.connect(_on_pressed)
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Escenas/main.tscn\")
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p25xy"]
+bg_color = Color(0.42352942, 0.8, 0.9647059, 1)
+border_width_right = 5
+border_width_bottom = 6
+border_color = Color(0.30980393, 0.59607846, 0.72156864, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+expand_margin_left = 30.0
+expand_margin_top = 5.0
+expand_margin_right = 30.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17m5t"]
+bg_color = Color(0.42352942, 0.8, 0.9647059, 1)
+border_width_right = 5
+border_width_bottom = 6
+border_color = Color(0.30980393, 0.59607846, 0.72156864, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+expand_margin_left = 30.0
+expand_margin_top = 5.0
+expand_margin_right = 30.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0, 0, 0, 0.05490196)
+shadow_size = 3
+shadow_offset = Vector2(7, 7)
+
+[node name="Menu" type="Control" unique_id=1209601105]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_lnt83")
+
+[node name="Label" type="Label" parent="." unique_id=542192787]
+layout_mode = 0
+offset_left = -575.0
+offset_top = -250.0
+offset_right = 576.0
+offset_bottom = -156.0
+theme_override_fonts/font = ExtResource("1_lnt83")
+theme_override_font_sizes/font_size = 70
+text = "Carrera Nevada"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Jugar" type="Button" parent="." unique_id=556858896]
+layout_mode = 0
+offset_left = -48.0
+offset_top = -4.0
+offset_right = 45.0
+offset_bottom = 43.0
+theme_override_fonts/font = ExtResource("1_lnt83")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_p25xy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_17m5t")
+text = "Jugar"

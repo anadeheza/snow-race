@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cd4jjun6lc4ym"]
+
+[ext_resource type="Script" uid="uid://dy846bo6logrl" path="res://Escenas/obstaculo_2.gd" id="1_aio66"]
+[ext_resource type="Texture2D" uid="uid://dqoyl1ho2xlpn" path="res://assets/sprites/charco.png" id="2_wyqmx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wyqmx"]
+size = Vector2(135.047, 80)
+
+[node name="Obstaculo2" type="Area2D" unique_id=1730036851]
+script = ExtResource("1_aio66")
+
+[node name="Obstaculo2" type="Sprite2D" parent="." unique_id=1322957764]
+position = Vector2(67.351494, 92)
+scale = Vector2(0.11441417, 0.120000005)
+texture = ExtResource("2_wyqmx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=420296183]
+position = Vector2(66.4765, 89)
+shape = SubResource("RectangleShape2D_wyqmx")

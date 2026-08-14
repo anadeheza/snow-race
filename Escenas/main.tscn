@@ -8,9 +8,123 @@
 [ext_resource type="PackedScene" uid="uid://b8us0bd103uco" path="res://Escenas/estrella.tscn" id="4_2ia52"]
 [ext_resource type="PackedScene" uid="uid://wgj1e1br25w0" path="res://Escenas/Spawner.tscn" id="5_crgrh"]
 [ext_resource type="Script" uid="uid://cpuumm0vnw0cr" path="res://Escenas/ui.gd" id="6_crgrh"]
+[ext_resource type="PackedScene" uid="uid://cd4jjun6lc4ym" path="res://Escenas/obstaculo2.tscn" id="8_n3qho"]
+[ext_resource type="PackedScene" uid="uid://c5uoa6o7dw1j5" path="res://Escenas/meta.tscn" id="9_n3qho"]
+[ext_resource type="FontFile" uid="uid://bmjg4wphcl25r" path="res://assets/fonts/ComicRelief-Bold.ttf" id="11_l8mww"]
+[ext_resource type="Texture2D" uid="uid://c2qiik1k8fw5x" path="res://assets/sprites/arrows.png" id="12_b1m0k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3g4d"]
+bg_color = Color(1, 0.84313726, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.42352942, 0.8, 0.8, 0.35686275)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l8mww"]
+bg_color = Color(0.42352942, 0.8, 0.9647059, 1)
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.30980393, 0.59607846, 0.72156864, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 30.0
+expand_margin_top = 5.0
+expand_margin_right = 30.0
+expand_margin_bottom = 5.0
+shadow_offset = Vector2(7, 7)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i4rd6"]
+bg_color = Color(0.42352942, 0.8, 0.9647059, 1)
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.30980393, 0.59607846, 0.72156864, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 30.0
+expand_margin_top = 5.0
+expand_margin_right = 30.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0, 0, 0, 0.23529412)
+shadow_size = 1
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nyv6x"]
+bg_color = Color(0.42352942, 0.8, 0.9647059, 1)
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.30980393, 0.59607846, 0.72156864, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 30.0
+expand_margin_top = 5.0
+expand_margin_right = 30.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0, 0, 0, 0.23529412)
+shadow_size = 1
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7rjx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_luinv"]
+bg_color = Color(1, 0.84313726, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.42352942, 0.8, 0.8, 0.35686275)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ndum"]
+bg_color = Color(0.42352942, 0.8, 0.9647059, 1)
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.30980393, 0.59607846, 0.72156864, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 30.0
+expand_margin_top = 5.0
+expand_margin_right = 30.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0, 0, 0, 0.23529412)
+shadow_size = 1
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1m0k"]
+bg_color = Color(0.42352942, 0.8, 0.9647059, 1)
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.30980393, 0.59607846, 0.72156864, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 30.0
+expand_margin_top = 5.0
+expand_margin_right = 30.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0, 0, 0, 0.23529412)
+shadow_size = 1
+shadow_offset = Vector2(5, 5)
 
 [node name="Main" type="Node2D" unique_id=709673084]
 script = ExtResource("1_s2ilj")
+meta_scene = ExtResource("9_n3qho")
 
 [node name="Fondo" type="Sprite2D" parent="." unique_id=1021832033]
 position = Vector2(560.937, 324.5)
@@ -22,6 +136,7 @@ script = ExtResource("3_ktoa8")
 
 [node name="Spawner" parent="." unique_id=447159731 instance=ExtResource("5_crgrh")]
 obstaculo = ExtResource("3_0kh0y")
+obstaculo2 = ExtResource("8_n3qho")
 estrella = ExtResource("4_2ia52")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=948429045]
@@ -32,7 +147,6 @@ offset_left = 10.0
 offset_top = 5.0
 offset_right = 71.0
 offset_bottom = 28.0
-text = "Score: 0"
 
 [node name="Distancia" type="Label" parent="UI" unique_id=1278833552]
 offset_left = 10.0
@@ -47,15 +161,98 @@ offset_right = 227.0
 offset_bottom = 63.0
 
 [node name="Win" type="Control" parent="UI" unique_id=1599532535]
+process_mode = 2
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Label" type="Label" parent="UI/Win" unique_id=1671307334]
+[node name="Victoria" type="Panel" parent="UI/Win" unique_id=702019031]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = -200.0
+offset_top = -120.0
+offset_right = 205.0
+offset_bottom = 140.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_o3g4d")
+
+[node name="Label" type="Label" parent="UI/Win/Victoria" unique_id=594297671]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 28.0
+offset_right = 393.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_l8mww")
+theme_override_font_sizes/font_size = 40
+text = "¡FIN!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Win/Victoria" unique_id=831958197]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 100.0
+offset_right = 116.0
+offset_bottom = 137.0
+
+[node name="tardaste" type="Label" parent="UI/Win/Victoria/HBoxContainer" unique_id=195798759]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.78431374, 0.3254902, 1)
+theme_override_fonts/font = ExtResource("11_l8mww")
+theme_override_font_sizes/font_size = 18
+text = "TARDASTE: "
+
+[node name="tiempo" type="Label" parent="UI/Win/Victoria/HBoxContainer" unique_id=634688785]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6117647, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_l8mww")
+theme_override_font_sizes/font_size = 18
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/Win/Victoria" unique_id=1110908567]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 100.0
+offset_right = 335.0
+offset_bottom = 140.0
+
+[node name="puntos" type="Label" parent="UI/Win/Victoria/HBoxContainer2" unique_id=1790763467]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.78431374, 0.3254902, 1)
+theme_override_fonts/font = ExtResource("11_l8mww")
+theme_override_font_sizes/font_size = 18
+text = "PUNTOS:"
+
+[node name="puntaje" type="Label" parent="UI/Win/Victoria/HBoxContainer2" unique_id=214747996]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6117647, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_l8mww")
+theme_override_font_sizes/font_size = 18
+
+[node name="Salir" type="Button" parent="UI/Win/Victoria" unique_id=1670883800]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 174.0
+offset_right = 230.0
+offset_bottom = 205.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_l8mww")
+theme_override_styles/normal = SubResource("StyleBoxFlat_l8mww")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i4rd6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nyv6x")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_c7rjx")
+text = "SALIR"
 
 [node name="Countdown" type="Control" parent="UI" unique_id=1168620912]
 layout_mode = 3
@@ -67,9 +264,78 @@ offset_bottom = 340.0
 
 [node name="Label" type="Label" parent="UI/Countdown" unique_id=523724468]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = -27.0
+offset_right = 49.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(1, 0.8117647, 0.4392157, 1)
+theme_override_fonts/font = ExtResource("11_l8mww")
 theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Menu" type="Control" parent="UI" unique_id=776539050]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Inicio" type="Panel" parent="UI/Menu" unique_id=88995349]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.030001
+anchor_top = 7.5470004
+anchor_right = 14.030001
+anchor_bottom = 7.5470004
+offset_left = -240.20001
+offset_top = -144.88
+offset_right = 254.79999
+offset_bottom = 178.12
+theme_override_styles/panel = SubResource("StyleBoxFlat_luinv")
+
+[node name="Jugar" type="Button" parent="UI/Menu/Inicio" unique_id=1721511855]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 237.0
+offset_right = 276.0
+offset_bottom = 268.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_l8mww")
+theme_override_styles/normal = SubResource("StyleBoxFlat_l8mww")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7ndum")
+theme_override_styles/hover = SubResource("StyleBoxFlat_b1m0k")
+text = "JUGAR"
+
+[node name="Label" type="Label" parent="UI/Menu" unique_id=1758671318]
+layout_mode = 0
+offset_left = 331.0
+offset_top = 191.0
+offset_right = 804.0
+offset_bottom = 304.0
+theme_override_fonts/font = ExtResource("11_l8mww")
+theme_override_font_sizes/font_size = 45
+text = "Carrera Nevada
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/Menu" unique_id=1709818117]
+position = Vector2(582, 339)
+scale = Vector2(0.17583333, 0.16416664)
+texture = ExtResource("12_b1m0k")
+
+[node name="Label2" type="Label" parent="UI/Menu" unique_id=380701136]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 338.0
+offset_right = 806.0
+offset_bottom = 361.0
+theme_override_colors/font_color = Color(0, 0, 0, 0.28235295)
+theme_override_fonts/font = ExtResource("11_l8mww")
+theme_override_font_sizes/font_size = 16
+text = "use las flechas para moverse entre carriles"
 horizontal_alignment = 1
 vertical_alignment = 1
 

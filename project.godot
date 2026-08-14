@@ -13,7 +13,7 @@ config_version=5
 config/name="Jetski Race"
 run/main_scene="uid://c3pi77iweh2x1"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://c7v13x42xde12"
 
 [autoload]
 
@@ -41,3 +41,4 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
