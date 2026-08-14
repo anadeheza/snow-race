@@ -15,7 +15,7 @@ You can move between the 4 lanes of the track with the Up and Down arrow keys to
 
 When you reach the finish line, you gradually slow down to a stop, then you'll see a victory panel that shows your final time and score and a "Salir" button that takes you back to the menu
 
-## Running the Game locally
+## Run the Game locally
 
 1. Clone or download the repo
 2. Open the project folder in Godot (i did it in Godot 4 so it'll be better if you get that version).
